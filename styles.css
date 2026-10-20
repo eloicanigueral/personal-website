@@ -39,9 +39,12 @@ ul{
     list-style: none;
 }
 
-/*nav*/ a{  
+a{  
     color: inherit; /*for the links always look the same, no changing color when visited*/
     text-decoration: none; /*non underlined*/
+}
+#main a:hover, nav a:hover{ /*dont know if its the correct way, but it works*/
+    color: var(--secondary);
 }
 
 span{
@@ -141,8 +144,8 @@ section{
 
 .project-list{ 
     flex-direction: column; 
+    justify-content: center; /* to center at the "SECTION".... dont know if i need align-items: center; */
     align-items: stretch; /*to cover all the width*/
-    align-content: center;
     gap: 0; 
     margin: 5% 0; /*bit of space at the top, 0 at sides*/
     padding: 0; 
