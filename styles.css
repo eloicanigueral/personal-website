@@ -45,6 +45,7 @@ a{
 }
 #main a:hover, nav a:hover{ /*dont know if its the correct way, but it works*/
     color: var(--secondary);
+    text-decoration: underline;
 }
 
 span{
@@ -177,6 +178,19 @@ section{
     width: 180px; 
 }
 
+#contact > div {
+    padding: 100px 0px 0px 100px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background: rebeccapurple; */
+    ul{
+        flex-direction: column;
+        gap: 20px;
+        font-weight: bold;
+    }
+}
 
 footer{ 
     padding: 24px; 
