@@ -1,10 +1,10 @@
 *{box-sizing: border-box;} /*so that everything is really the size I specify (and the padding isn't added to it)*/
 
 :root{ /*to set the color variables*/
-	--text: #f4f4f4;   --bg: #101010; --secondary: #9a9a9a; --line: #2e2e2e;
+	--text: #f4f4f4;   --bg: #101010; --secondary: #9a9a9a; --line: #2e2e2e;  --red: #e64b4b
 }
 
-html{scroll-behavior: smooth;} /*to have a smooth scroll when jumping different sections / classes*/
+/*html{scroll-behavior: smooth;} /*to have a smooth scroll when jumping different sections / classes*/
 
 body{
     margin: 0;
@@ -171,27 +171,69 @@ section{
 .hover{ /*the rectangle always exist... but with no width*/
     width: 0; 
     height: 56px; 
-    background: #e64b4b; 
+    background: var(--red); 
     transition: width .3s, opacity .3s; 
 }
 .project-list a:hover .hover{  /*on hover, i change the width and it moves all and appears*/
     width: 180px; 
 }
 
+
+
+
+
+
+
+
 #contact > div {
-    padding: 100px 0px 0px 100px;
+    padding: 125px 0px 0px 100px;
     height: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* background: rebeccapurple; */
-    ul{
-        flex-direction: column;
-        gap: 20px;
-        font-weight: bold;
-    }
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: right;
+
+    font-weight: bold;
+    gap: 100px 140px;
+    font-size: larger;
+}
+
+.mail{
+    /* 
+    p{color: var(--text);} */
+    font-size: 30px;
+    /*  */
+}
+
+.mail a{
+    color: var(--secondary);
+}
+.mail a:hover{color: var(--text);}
+
+#contact a:hover{
+    text-decoration: underline var(--red);
+}
+
+#contact ul {
+    flex-direction: column;
+    gap: 4px;
+    color: var(--text);
+}
+
+#cv {
+    border: 1px solid var(--text);
+    color: var(--text);
+    border-radius: 20px; /* to make it round, as a pill*/
+    padding: 5px 15px;
+    transition: background .3s, color .3s;  /*to make the change of color smoother*/
+}
+
+#cv:hover{
+    background: var(--text);
+    color: var(--bg);
 }
 
 footer{ 
-    padding: 24px; 
+    padding: 15px; 
+    text-align: center;
 }
