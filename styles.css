@@ -97,7 +97,7 @@ section{
     padding: 24px;
 }
 #main h1{
-    margin: 5% 20%;
+    margin: auto 20%;
     font-size: 70px;
     text-align: center;
 }
@@ -122,6 +122,9 @@ section{
     font-size: 14px;
     font-weight: normal;
     color: var(--secondary); 
+}
+#about > div {
+    align-content: center;
 }
 .skill-types{
     display: grid;
@@ -183,9 +186,8 @@ section{
 
 
 #contact > div {
-    padding: 125px 0px 0px 100px;
+    padding: 10% 0 0 10%;
     height: 300px;
-
 
     display: grid;
     grid-template-columns: 50% 50%;
