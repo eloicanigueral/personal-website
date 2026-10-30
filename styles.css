@@ -14,11 +14,10 @@ body{
 }
 
 header{
-    position: sticky; /*ok.. it sticks to its father...(the body)*/
+    position: sticky; /*ok.. it sticks to its parent...(the body)*/
     top: 0px;
     height: 60px;
     padding: 10px 24px;
-    /* background: var(--bg); /* no special color needed? it doesnt work*/
     font-size: large;
     backdrop-filter: blur(10px);
 }
@@ -43,7 +42,7 @@ a{
     color: inherit; /*for the links always look the same, no changing color when visited*/
     text-decoration: none; /*non underlined*/
 }
-#main a:hover, nav a:hover{ /*dont know if its the correct way, but it works*/
+#main a:hover, nav a:hover{
     color: var(--secondary);
     text-decoration: underline;
 }
@@ -53,32 +52,24 @@ span{
     font-weight: bold;
 }
 
-h2{ /*have to look at this \\\  titles for the sections */
+h2{
     font-size: 40px; 
     margin: 0;
 
-    font-family: Georgia, Times, serif;
+    font-family: Verdana,Arial;
     font-style: italic;
+    letter-spacing: -4px;
 }
 
 p{ /*have to look at this*/
-    /* max-width: 500px;  */
     line-height: 1.6;
 
     font-family:Verdana,Arial, serif;
 }
 
-img{ /*i think i have to delete this.. bc all the img will be different sizes.. and diferent uses*/
-    /*position: relative; /*how can i do to make this at the same size despite doing zoom or not??...*/ /*w the relative position, it goes upper and passes through the nav bar, i have to put z-index: -1; and not to effect product imgs*/
-    width: 150px;
-    margin-top: 30px;
-    margin-right: 10px;
-    /*float: left; /*i want it to float but only in the main section.. not the others*/
-}
-
 section{
     min-height: calc(80svh - 60px);
-    padding: 40px 20px; /* idk how to do this...*/
+    padding: 40px 20px;
     border-bottom: 1px solid var(--line);
 
     display: grid;
@@ -89,8 +80,8 @@ section{
 }
 
 #main{
-    /* position: relative; /*i think i dont need it*/
-    min-height: calc(100svh - 60px); /*all the screen - the header size, i dont know how to calc the header size...*/
+    position: relative;
+    min-height: calc(100svh - 60px); /*all the screen - the header size.*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,7 +99,6 @@ section{
     justify-content: space-between;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-    /* padding: 16px 0; */
 }
 
 
@@ -150,9 +140,9 @@ section{
 
 .project-list{ 
     flex-direction: column; 
-    justify-content: center; /* to center at the "SECTION".... dont know if i need align-items: center; */
-    align-items: stretch; /*to cover all the width*/
-    gap: 0; 
+    justify-content: center; /* to center at the "SECTION"*/
+    align-items: stretch; /*to cover all the same width*/
+    gap: 10%; 
     margin: 5% 0; /*bit of space at the top, 0 at sides*/
     padding: 0; 
 }
@@ -170,7 +160,7 @@ section{
     font-size: 25px; 
 }
 .project-list span{ 
-    flex: 1; /*dont understand why.. and it doesnt cahgne with the values over 0 */
+    flex: 1;
     font-weight: normal; 
 } 
 .hover{ /*the rectangle always exist... but with no width*/
@@ -179,10 +169,9 @@ section{
     background: var(--red); 
     transition: width .3s, opacity .3s; 
 }
-.project-list a:hover .hover{  /*on hover, i change the width and it moves all and appears*/
+.project-list a:hover .hover{  /*on hover, it changes the width to appear and moves it all*/
     width: 180px; 
 }
-
 
 
 #contact > div {
